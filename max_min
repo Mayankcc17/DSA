@@ -1,60 +1,33 @@
-
-//{ Driver Code Starts
-#include <bits/stdc++.h>
+#include <iostream>
 using namespace std;
 
-// } Driver Code Ends
-// User function Template for C++
-class Solution
+void min_max(int n, int arr[])
 {
-public:
-    pair<long long, long long> getMinMax(vector<long long int> arr)
+    // int n = arr.size();
+    long long min = arr[0];
+    long long max = arr[0];
+
+    for (int i = 1; i < n; i++)
     {
-        // code here
-        int n = arr.size();
-        long long min = arr[0];
-        long long max = arr[0];
-
-        for (int i = 1; i < n; i++)
+        if (arr[i] < min)
         {
-            if (arr[i] < min)
-            {
-                min = arr[i];
-            }
-
-            if (arr[i] > max)
-            {
-                max = arr[i];
-            }
+            min = arr[i];
         }
 
-        return make_pair(min, max);
+        if (arr[i] > max)
+        {
+            max = arr[i];
+        }
     }
-};
-
-//{ Driver Code Starts.
+    cout << "Min: " << min << endl;
+    cout << "Max: " << max << endl;
+}
 
 int main()
 {
-    int t;
-    // cout  << "Enter the number of test cases: ";
-    cin >> t;
-    cin.ignore();
-    while (t--)
-    {
-        vector<long long int> arr;
-        string input;
-        getline(cin, input);
-        stringstream ss(input);
-        int number;
-        while (ss >> number)
-        {
-            arr.push_back(number);
-        }
-        Solution ob;
-        pair<long long, long long> pp = ob.getMinMax(arr);
-        cout << pp.first << " " << pp.second << endl;
-    }
+    int ar[] = {5, 9, 78, 45, 32, 6};
+    int n = 6;
+
+    min_max(n, ar);
     return 0;
 }
-// } Driver Code Ends
