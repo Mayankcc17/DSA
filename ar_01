@@ -1,0 +1,24 @@
+// 1. WAP to store elements in an array and print them.
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int n = 10;
+    int arr[n];
+
+    for (int i = 0; i < n; i++)
+    {
+        cout << "element " << i  << " : ";
+        cin >> arr[i];
+    }
+
+    cout << endl << "Elements in Array are : ";
+    for (int i = 0; i < n; i++)
+    {
+        cout << arr[i] << " ";
+    }
+
+    return 0;
+}
