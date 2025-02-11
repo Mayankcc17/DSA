@@ -1,0 +1,27 @@
+// 4. WAP to copy the elements of one array into another array.
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int arr1[4] = {1, 2, 3, 4};
+    int arr2[4];
+
+    cout << "Elements of first array: ";
+    for (int i = 0; i < 4; i++)
+    {
+        cout << arr1[i] << " ";
+    }
+
+    cout << endl
+         << "Elements of second array: ";
+    for (int i = 0; i < 4; i++)
+    {
+        arr2[i] = arr1[i];
+        cout << arr2[i] << " ";
+    }
+    cout << endl;
+
+    return 0;
+}
